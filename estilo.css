@@ -1,0 +1,607 @@
+/* Variables de color */
+:root {
+    --color-principal: #2fb6b9;
+    --color-secundario: #c5a9d1;
+    --color-terciario: #f283a1;
+    --color-fondo: #e4ddda; /* Beige */
+    --color-texto: #333;
+}
+ 
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+ 
+/* Estilo general */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: "Rubik", sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+ 
+/* Header - Navegación */
+.header {
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: whitesmoke;
+    color: var(--color-terciario);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img{
+    width: 150px;
+}
+
+h2 {
+    color: cadetblue;
+    margin-bottom: 2%;
+}
+ 
+p {
+    margin: 10px 0px;
+}
+
+.nav-links {
+    padding: 2%;
+    display: flex;
+    list-style: none;
+}
+ 
+.nav-links li {
+    margin-right: 12px;
+    font-weight: 500;
+    width: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+ 
+.nav-links a {
+    color: var(--color-principal);
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.nav-links a:hover {
+    color: var(--color-terciario);
+    font-weight: bold;
+}
+
+/* Menú hamburguesa (para móviles) */
+.nav-toggle {
+    color: var(--color-terciario);
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+ 
+/* Secciones */
+.section {
+    padding: 2% 4%;
+    text-align: center;
+}
+
+/* --------------------- Mi información --------------------*/
+
+.MiInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+  
+  .MiInfo img {
+    max-width: 300px;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+  
+  /* Texto que irá al lado derecho en escritorio */
+  .texto-miinfo {
+    max-width: 600px;
+  }
+  
+  
+
+
+/* ---------------------- Promociones ------------------------ */
+
+#promociones {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .promo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .promo {
+    background-color: white;
+    border: 3px dashed var(--color-secundario);
+    padding: 20px;
+    width: 260px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .promo h3 {
+    font-size: 1.4rem;
+    color: var(--color-terciario);
+    margin-bottom: 10px;
+  }
+  
+  .promo p {
+    font-size: 0.95rem;
+    color: var(--color-texto);
+  }
+  
+  .promo:hover {
+    transform: scale(1.05);
+    background-color: var(--color-secundario);
+    color: white;
+  }
+  
+  .promo:hover h3,
+  .promo:hover p {
+    color: white;
+  }
+  
+  /* ---------------------- Responsive Promociones ---------------------- */
+  @media (max-width: 750px) {
+    .promo-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .promo {
+      width: 90%;
+    }
+  }
+  
+
+
+/* ------------------- Proyectos ---------------------- */
+ 
+/* Proyectos en Grid */
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*Como funciona esto? */
+    gap: 15px;
+    padding: 0;
+}
+
+.proyecto {
+    position: relative;
+    overflow: hidden;
+    padding: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.proyecto a{
+    text-decoration: none;
+}
+
+.proyecto::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* opacidad de filtro */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    
+}
+
+.proyecto span {
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    color: white;
+    font-size: 1.2rem;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    text-align: center;
+    padding: 0 10px;
+    
+}
+
+.proyecto:hover::before {
+    opacity: 1;
+    
+}
+
+.proyecto:hover { 
+    transform: scale(105%); 
+}
+
+.proyecto:hover span {
+    opacity: 1;
+    transform: translateY(0);
+    
+    font-size: 1.4rem;
+}
+
+
+/* Aplicar imágenes específicas */
+.proyecto:nth-child(1) {
+    background-image: url('imgs/Mockup.png');
+}
+
+.proyecto:nth-child(2) {
+    background-image: url('imgs/Facebook.jpeg');
+}
+
+.proyecto:nth-child(3) {
+    background-image: url('imgs/UXMockup.png');
+}
+
+.proyecto:nth-child(4) {
+    background-image: url('imgs/storyboard.png');
+}
+
+/* ----------------------- Formulario ----------------------*/ 
+
+.form-container {
+    width: 50%;
+    padding: 17px;
+    border: 2px solid #c5a9d1;
+    border-radius: 10px;
+    background-color: white;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    column-gap: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #c5a9d1;
+    border-radius: 5px;
+}
+
+.half {
+    width: 47%;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+.file-contact {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.send-button {
+    width: 100%;
+    background-color: #c5a9d1;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #a284b5;
+}
+
+
+/* Testimonios */
+#testimonios {
+    background: var(--color-fondo);
+    padding: 40px 50px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .carousel {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px var(--color-principal);
+  }
+  
+  .testimonial-container {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    
+  }
+  
+  .testimonial {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 4% 10%;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .testimonial.activo {
+    display: flex;
+  }
+  
+  /* Foto en círculo */
+  .foto-autor {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  
+  .foto-autor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Flechas */
+  .arrow {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background: #8a4fff;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .arrow.left {
+    left: 15px;
+  }
+  
+  .arrow.right {
+    right: 15px;
+  }
+  
+  /* Puntos de navegación */
+  .dots {
+    margin-top: 20px;
+  }
+  
+  .dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 6px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .dot.activo {
+    background-color: #8a4fff;
+  }
+  
+
+ 
+/* ----------------------- Footer ------------------------ */
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-terciario);
+    color: white;
+}
+
+/* Centramos el texto y los íconos */
+.redes {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    align-items: center; /* Alinea los íconos verticalmente */
+    gap: 15px; /* Espaciado entre íconos */
+    margin-top: 10px;
+}
+
+/* Estilizamos los enlaces */
+.redes a {
+    text-decoration: none;
+}
+
+/* Ajustamos el tamaño de las imágenes */
+.redes img {
+    width: 50px; /* Tamaño uniforme */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efecto hover para los íconos */
+.redes img:hover {
+    transform: scale(1.2); /* Efecto de aumento al pasar el mouse */
+}
+
+
+
+/* === Galería de Proyectos unificada === */
+.project-page {
+    padding: 4% 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .project-page h1 {
+    font-size: 2rem;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+  }
+  .project-page .intro {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    color: var(--color-texto);
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .gallery-item {
+    position: relative;
+    flex: 1 1 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: var(--color-principal);
+    transition: transform 0.3s ease;
+  }
+  .gallery-item img,
+  .gallery-item .placeholder {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+  }
+  .placeholder {
+    background-color: #ccc;
+  }
+  .gallery-item .caption {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #fff;
+  }
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  .gallery-item:hover img,
+  .gallery-item:hover .placeholder {
+    filter: brightness(0.8);
+  }
+  
+  /* Colores por sección */
+  .project-publicitario h1 { color: #9E89A7; }
+  .project-branding h1     { color: #8e44ad; }
+  .project-webux h1        { color: #6F517C; }
+  .project-ilustracion h1  { color: #452852; }
+  
+  /* === Responsivo (móviles a partir de 750px) === */
+  @media (max-width: 750px) {
+    .gallery {
+      flex-direction: column;
+    }
+    .gallery-item {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+
+
+ 
+/* Responsivo ------------------------------------------------------- */ 
+@media (max-width: 750px) {
+    .logo img {
+        width: 120px;
+        margin: 0;
+      }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--color-principal);
+        position: absolute;
+        top: 74px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+ 
+    .nav-links li {
+        padding: 15px;
+    }
+ 
+    .nav-links a {
+        color: #fff;
+    }
+
+    .nav-links a:hover {
+        color: var(--color-secundario);
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+ 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .MiInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .texto-miinfo {
+        max-width: 100%;
+    }
+
+    .form-container {
+        width: 90%;
+        
+    }
+
+    .project-page {
+        padding: 5% 3%;
+      }
+      .project-page h1 {
+        font-size: 1.8rem;
+      }
+      .project-page .gallery {
+        flex-direction: column;
+        gap: 15px;
+      }
+      .gallery-item {
+        flex: 1 1 auto;
+      }
+      .gallery-item img {
+        height: auto;
+      }
+}
+

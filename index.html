@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki</title>
+
+    <link href="estilo.css" rel="stylesheet">
+
+    <!-- Enlace a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K6VWM6MXD7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-K6VWM6MXD7');
+    </script>
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+        <div class="logo"> <a href="index.html"> <img src="imgs/LogoWebMeraki.png"
+                    alt="MerakiLogo"></a> </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+
+            </ul>
+        </nav>
+
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div> <!-- Para que es esto? -->
+
+
+    </header>
+
+    <!-- Sección principal -->
+    <main>
+        <section id="sobre-mi" class="section">
+            <h2>Sobre mí</h2>
+
+            <div class="MiInfo">
+                <img src="imgs/HinataFB.jpg" alt="Foto personal">
+
+                <div class="texto-miinfo">
+                    <p>
+                        ¡Hola! Soy una diseñadora digital apasionada por transformar ideas en experiencias visuales
+                        únicas.
+                        En este portafolio encontrarás una muestra de mi trabajo, desde la creación de marcas e
+                        ilustraciones
+                        hasta el diseño web y el arte visual para videojuegos.
+                    </p>
+                    <p>
+                        Mi enfoque combina creatividad, estrategia y atención al detalle, buscando siempre soluciones
+                        que conecten
+                        visualmente con cada audiencia. Me encanta experimentar con colores, estilos y narrativas
+                        visuales que
+                        den vida a cada proyecto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sección de Promociones -->
+        <section id="promociones" class="section">
+            <h2>Promociones</h2>
+            <div class="promo-container">
+                <div class="promo">
+                    <h3>¡Descuento del 20%!</h3>
+                    <p>En tu primer diseño de identidad gráfica.</p>
+                </div>
+                <div class="promo">
+                    <h3>2x1</h3>
+                    <p>En paquetes de diseño publicitario y mockups.</p>
+                </div>
+                <div class="promo">
+                    <h3>Consulta Gratis</h3>
+                    <p>Solicita asesoría inicial sin costo para tu proyecto.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="proyectos" class="section">
+            <h2>Proyectos</h2>
+            <div class="grid-proyectos">
+                <div class="proyecto"> <a href="disPubli.html"> <span>Diseño publicitario</span> </a> </div>
+                <div class="proyecto"> <a href="disPubli.html"> <span>Diseño de marca/producto y/o
+                            servicio</span></a></div>
+                <div class="proyecto"> <a href="disPubli.html"> <span>Diseño web y UX</span> </a> </div>
+                <div class="proyecto"> <a href="disPubli.html"> <span>Ilustración digital y diseño de
+                            personajes</span> </a> </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="section">
+            <h2>Contacto</h2>
+            <form class="form-container">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" class="half">
+                    <input type="email" placeholder="Correo electrónico" class="half">
+                </div>
+
+                <div class="form-group">
+                    <select>
+                        <option>Tema de consulta</option>
+                        <option>Problema técnico</option>
+                        <option>Información</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea placeholder="Descripción..."></textarea>
+                </div>
+
+                <div class="form-group file-contact">
+                    <input type="file" class="half">
+                    <select class="half">
+                        <option>Método de contacto preferido</option>
+                        <option>WhatsApp</option>
+                        <option>Facebook</option>
+                        <option>Instagram</option>
+                        <option>Correo</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="send-button">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Sección de Testimonios -->
+        <section id="testimonios">
+            <h2>Testimonios</h2>
+
+            <!-- Contenedor del carrusel -->
+            <div class="carousel">
+                <!-- Botón anterior -->
+                <button class="arrow left" onclick="moverCarrusel(-1)">&#10094;</button>
+
+                <!-- Slides -->
+                <div class="testimonial-container">
+                    <div class="testimonial activo">
+                        <div class="foto-autor">
+                            <img src="imgs/testi1.jpg" alt="Cliente 1">
+                        </div>
+                        <p>"Excelente trabajo, muy profesional y creativa. Superó mis expectativas."</p>
+                        <h4>- Cliente 1</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="foto-autor">
+                            <img src="imgs/testi2.jpg" alt="Cliente 2">
+                        </div>
+                        <p>"Gran comunicación y diseño impecable. Sin duda volveré a trabajar con ella."</p>
+                        <h4>- Cliente 2</h4>
+                    </div>
+
+                    <div class="testimonial">
+                        <div class="foto-autor">
+                            <img src="imgs/testi3.jpg" alt="Cliente 3">
+                        </div>
+                        <p>"Muy atenta, cumplió con los tiempos y el diseño fue justo lo que buscaba."</p>
+                        <h4>- Cliente 3</h4>
+                    </div>
+                </div>
+
+                <!-- Botón siguiente -->
+                <button class="arrow right" onclick="moverCarrusel(1)">&#10095;</button>
+            </div>
+
+            <!-- Puntos de navegación -->
+            <div class="dots">
+                <span class="dot activo" onclick="seleccionarTestimonio(0)"></span>
+                <span class="dot" onclick="seleccionarTestimonio(1)"></span>
+                <span class="dot" onclick="seleccionarTestimonio(2)"></span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Redes sociales</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/kataby_mosa/"> <img src="imgs/insta.png" alt="instagram"
+                    width="100px"> </a>
+            <a href="https://www.behance.net/abimosa"> <img src="imgs/behance.png" alt="facebook"
+                    width="50px"> </a>
+            <a href="#"> <img src="imgs/twitter.png" alt="twitter" width="50px"> </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
