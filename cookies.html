@@ -1,0 +1,128 @@
+<!-- cookies.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aviso de Privacidad y Cookies</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cookies.css">
+</head>
+
+<body>
+
+  <!-- Navegación -->
+  <header class="header">
+    <div class="logo"> <a href="index.html"> <img src="imgs/icon_logo.svg" alt="MerakiLogo"></a> </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+
+      </ul>
+    </nav>
+
+    <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+  </header>
+
+
+  <main class="privacy-content">
+    <h1>Aviso de Privacidad y Uso de Cookies</h1>
+
+    <p>
+      En este sitio web valoramos tu privacidad. Por ello, te informamos sobre cómo recopilamos, usamos y protegemos tus
+      datos personales, así como el uso de cookies para ofrecerte una mejor experiencia de navegación.
+    </p>
+
+    <h2>¿Qué son las cookies?</h2>
+    <p>
+      Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web. Estas
+      permiten recordar tus acciones y preferencias durante un tiempo determinado para mejorar tu experiencia como
+      usuario.
+    </p>
+
+    <h2>Tipos de Cookies que utilizamos</h2>
+    <ul>
+      <li><strong>Cookies necesarias:</strong> Son esenciales para que el sitio funcione correctamente. Incluyen
+        funciones como la navegación por la página o el acceso seguro a áreas restringidas.</li>
+      <li><strong>Cookies de rendimiento:</strong> Recopilan datos de manera anónima sobre cómo los visitantes usan el
+        sitio, como las páginas más visitadas o si han experimentado errores.</li>
+      <li><strong>Cookies de personalización:</strong> Permiten recordar tus preferencias (como idioma o región) para
+        ofrecerte una navegación más adaptada a ti.</li>
+      <li><strong>Cookies de análisis:</strong> Nos ayudan a comprender el comportamiento general de los usuarios para
+        mejorar el contenido, el diseño y los servicios ofrecidos.</li>
+    </ul>
+
+    <h2>¿Qué datos recopilamos?</h2>
+    <p>
+      Podemos recoger información como tu nombre, correo electrónico (si decides contactarnos), información del
+      dispositivo (navegador, sistema operativo), dirección IP, ubicación aproximada y comportamiento de navegación
+      (tiempo en página, clics, etc.).
+    </p>
+
+    <h2>¿Cómo utilizamos esta información?</h2>
+    <p>
+      Utilizamos los datos recopilados para:
+    </p>
+    <ul>
+      <li>Mejorar el diseño y la funcionalidad del sitio.</li>
+      <li>Responder consultas o formularios de contacto.</li>
+      <li>Ofrecer contenido más relevante.</li>
+      <li>Realizar análisis estadísticos anónimos.</li>
+    </ul>
+
+    <h2>¿Cómo puedes controlar el uso de cookies?</h2>
+    <p>
+      Puedes configurar tu navegador para que bloquee algunas o todas las cookies, o para que te avise cuando un sitio
+      intente colocar una cookie en tu dispositivo. Ten en cuenta que al deshabilitar cookies, algunas funcionalidades
+      del sitio podrían no funcionar correctamente.
+    </p>
+
+    <p>
+      También puedes gestionar tus preferencias en el aviso emergente que aparece al ingresar al sitio, o <a
+        href="#cookies-popup">volver a abrir el aviso de cookies</a> si deseas cambiar tu decisión.
+    </p>
+
+    <h2>Actualizaciones</h2>
+    <p>
+      Este aviso puede modificarse en cualquier momento. Te recomendamos revisarlo periódicamente para mantenerte
+      informado sobre cómo protegemos tu información.
+    </p>
+
+    <p><strong>Última actualización:</strong> mayo 2025</p>
+  </main>
+
+  <div style="text-align: center; margin-top: 30px;">
+    <button id="aceptar-desde-pagina" class="send-button">Aceptar y volver al inicio</button>
+  </div>
+
+  <script>
+    document.getElementById("aceptar-desde-pagina").addEventListener("click", function () {
+      // Guardar en localStorage que ya se aceptaron
+      localStorage.setItem("cookies-aceptadas", "true");
+
+      // Redirigir a la página principal
+      window.location.href = "index.html";
+    });
+  </script>
+
+
+  <footer class="footer">
+    <p>Redes sociales</p>
+    <div class="redes">
+      <a href="https://www.instagram.com/kataby_mosa/"> <img src="imgs/icon_insta.svg" alt="instagram" width="100px">
+      </a>
+      <a href="https://www.behance.net/abimosa"> <img src="imgs/icon_face.svg" alt="facebook" width="50px">
+      </a>
+      <a href="#"> <img src="imgs/icon_behance.svg" alt="twitter" width="50px"> </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

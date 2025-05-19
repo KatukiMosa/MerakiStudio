@@ -1,0 +1,153 @@
+/* === base.css === */
+
+/* Variables de color */
+:root {
+  --color-principal: #2fb6b9;
+  --color-secundario: #9032bb;
+  --color-terciario: #f283a1;
+  --color-fondo: #e6ccef;
+  --color-texto: #333;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+h2 {
+  color: cadetblue;
+  margin: 2%;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* ================= Header ================= */
+.header {
+  width: 100%;
+  height: 74px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: whitesmoke;
+  color: var(--color-terciario);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  padding: 2%;
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 12px;
+  font-weight: 500;
+  width: 100px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-links a {
+  color: var(--color-principal);
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.nav-links a:hover {
+  color: var(--color-terciario);
+  font-weight: bold;
+}
+
+.nav-toggle {
+  color: var(--color-terciario);
+  display: none;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+/* ================= Footer ================= */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-terciario);
+  color: white;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.redes a {
+  text-decoration: none;
+}
+
+.redes img {
+  width: 50px;
+  transition: transform 0.4s ease-in-out;
+}
+
+.redes img:hover {
+  transform: scale(1.1);
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 750px) {
+  .logo img {
+    width: 120px;
+    margin: 0;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--color-principal);
+    position: absolute;
+    top: 74px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 15px;
+  }
+
+  .nav-links a {
+    color: #fff;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-secundario);
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+}

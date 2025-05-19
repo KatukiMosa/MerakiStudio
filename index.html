@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meraki</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/cookies.css">
+
+
+
+    <!-- Enlace a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navegación -->
+    <header class="header">
+        <div class="logo"> <a href="index.html"> <img src="imgs/icon_logo.svg" alt="MerakiLogo"></a> </div>
+        <nav class="nav">
+            <ul class="nav-links">
+                <li><a href="#quienes">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-toggle" id="nav-toggle">&#9776;</div>
+    </header>
+
+
+    <!-- Aviso de Cookies -->
+    <div class="cookies-popup" id="cookies-popup">
+        <p>Este sitio usa cookies para mejorar tu experiencia. <a href="cookies.html">Leer más</a></p>
+        <div class="popup-buttons">
+            <button id="btn-aceptar">Aceptar</button>
+            <a href="cookies.html"><button class="config-btn">Configuración</button></a>
+        </div>
+    </div>
+
+    <section id="quienes" class="section about-wrapper">
+        <!-- QUIÉN SOY -->
+        <div class="about-item">
+            <img src="imgs/LogoImg.png" alt="Meraki Logo">
+            <div class="about-text">
+                <h3>Quién soy</h3>
+                <p>Soy diseñadora digital en Cd. Juárez, experta en transformar ideas en experiencias visuales únicas
+                    para estudios independientes y emprendedores emergentes.</p>
+            </div>
+        </div>
+
+        <!-- MISIÓN (imagen a la derecha) -->
+        <div class="about-item reverse">
+            <div class="about-text">
+                <h3>Misión</h3>
+                <p>Brindar soluciones de diseño de alta calidad que fusionen creatividad, estrategia y tecnología para
+                    potenciar la identidad visual de cada proyecto.</p>
+            </div>
+            <img src="imgs/FlorMeraki.png" alt="Icono Misión">
+        </div>
+
+        <!-- VISIÓN -->
+        <div class="about-item">
+            <img src="imgs/LogoWebMeraki.png" alt="Icono Visión">
+            <div class="about-text">
+                <h3>Visión</h3>
+                <p>Convertirme en referente del diseño digital en Cd. Juárez y construir una comunidad creativa que
+                    impulse el crecimiento de marcas emergentes.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Sección de Promociones -->
+    <section id="promociones" class="section">
+        <h2>Promociones</h2>
+        <div class="promo-container">
+            <div class="promo">
+                <h3>¡Descuento del 20%!</h3>
+                <p>En tu primer diseño de identidad gráfica.</p>
+            </div>
+            <div class="promo">
+                <h3>2x1</h3>
+                <p>En paquetes de diseño publicitario y mockups.</p>
+            </div>
+            <div class="promo">
+                <h3>Consulta Gratis</h3>
+                <p>Solicita asesoría inicial sin costo para tu proyecto.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos" class="section">
+        <h2>Proyectos</h2>
+        <div class="grid-proyectos">
+            <div class="proyecto"> <a href="disPubli.html"> <span>Diseño publicitario</span> </a> </div>
+            <div class="proyecto"> <a href="disPubli.html"> <span>Diseño de marca/producto y/o
+                        servicio</span></a></div>
+            <div class="proyecto"> <a href="disPubli.html"> <span>Diseño web y UX</span> </a> </div>
+            <div class="proyecto"> <a href="disPubli.html"> <span>Ilustración digital y diseño de
+                        personajes</span> </a> </div>
+        </div>
+    </section>
+
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="section">
+        <h2>Contacto</h2>
+
+        <div class="contacto-flex">
+            <!-- Pasos del formulario -->
+            <div class="consulta-pasos">
+                <h3>¿Cómo solicitar tu proyecto?</h3>
+                <ol>
+                    <li><strong>Selecciona una promoción</strong> en <a href="#promociones">Promociones</a> o elige
+                        “Otro”.</li>
+                    <li><strong>Completa el formulario</strong> eligiendo tema y adjuntando referencias.</li>
+                    <li><strong>Elige tu método de pago</strong> en la sección correspondiente.</li>
+                    <li><strong>Revisa nuestro proceso</strong> para conocer cada etapa del proyecto.</li>
+                    <li><strong>¡Listo!</strong> Te responderé en un plazo máximo de 48&nbsp;hrs.</li>
+                </ol>
+            </div>
+
+
+            <!-- Formulario -->
+            <form class="form-container" id="form-consulta">
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre" id="nombre" name="nombre" class="half" required>
+                    <input type="email" placeholder="Correo electrónico" id="email" name="email" class="half" required>
+                </div>
+
+                <div class="form-group">
+                    <select id="tema" name="tema" required>
+                        <option value="">Tema de consulta</option>
+                        <option value="20-descuento">Descuento 20%</option>
+                        <option value="2x1">Paquete 2x1</option>
+                        <option value="consulta">Consulta gratuita</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <textarea placeholder="Describe tu idea..." id="descripcion" name="descripcion" required></textarea>
+                </div>
+
+                <!-- Dentro de tu <form class="form-container"> -->
+                <div class="form-group">
+                    <input type="file" id="archivo" name="archivo" class="half">
+                    <select id="metodo-pago" name="metodo-pago" class="half" required>
+                        <option value="">Método de pago</option>
+                        <option value="transferencia">Transferencia bancaria</option>
+                        <option value="tarjeta">Tarjeta de crédito/débito</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                </div>
+
+
+                <button type="submit" class="send-button">Enviar</button>
+                <p id="mensaje-exito" style="display:none; color: green; margin-top: 10px;">¡Tu consulta fue enviada
+                    correctamente!</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Proceso de trabajo -->
+
+    <section id="proceso" class="section proceso-wrapper">
+        <h2>Proceso de Trabajo</h2>
+        <ol class="proceso-lista">
+            <li><strong>Contacto inicial:</strong> envías tu solicitud con detalles y referencia.</li>
+            <li><strong>Brief & Cotización:</strong> hablamos de objetivos y presupuestamos.</li>
+            <li><strong>Acuerdo & Pago:</strong> eliges tu método de pago y confirmamos proyecto.</li>
+            <li><strong>Desarrollo:</strong> bocetos, revisiones y ajustes hasta tu aprobación.</li>
+            <li><strong>Entrega:</strong> recibes los archivos finales y documentación de tu proyecto.</li>
+        </ol>
+    </section>
+
+
+
+    <!-- Sección de Testimonios -->
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+
+        <!-- Contenedor del carrusel -->
+        <div class="carousel">
+            <!-- Botón anterior -->
+            <button class="arrow left" onclick="moverCarrusel(-1)">&#10094;</button>
+
+            <!-- Slides -->
+            <div class="testimonial-container">
+                <div class="testimonial activo">
+                    <div class="foto-autor">
+                        <img src="imgs/testi1.jpg" alt="Cliente 1">
+                    </div>
+                    <p>"Excelente trabajo, muy profesional y creativa. Superó mis expectativas."</p>
+                    <h4>- Maria Flores</h4>
+                </div>
+
+                <div class="testimonial">
+                    <div class="foto-autor">
+                        <img src="imgs/testi2.jpg" alt="Cliente 2">
+                    </div>
+                    <p>"Gran comunicación y diseño impecable. Sin duda volveré a trabajar con ella."</p>
+                    <h4>- Fernando Guerra</h4>
+                </div>
+
+                <div class="testimonial">
+                    <div class="foto-autor">
+                        <img src="imgs/testi3.jpg" alt="Cliente 3">
+                    </div>
+                    <p>"Muy atenta, cumplió con los tiempos y el diseño fue justo lo que buscaba."</p>
+                    <h4>- Sandra </h4>
+                </div>
+            </div>
+
+            <!-- Botón siguiente -->
+            <button class="arrow right" onclick="moverCarrusel(1)">&#10095;</button>
+        </div>
+
+        <!-- Puntos de navegación -->
+        <div class="dots">
+            <span class="dot activo" onclick="seleccionarTestimonio(0)"></span>
+            <span class="dot" onclick="seleccionarTestimonio(1)"></span>
+            <span class="dot" onclick="seleccionarTestimonio(2)"></span>
+        </div>
+    </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Redes sociales</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/kataby_mosa/"> <img src="imgs/icon_insta.svg" alt="instagram"
+                    width="100px">
+            </a>
+            <a href="#"> <img src="imgs/icon_face.svg" alt="facebook" width="50px"> </a>
+            <a href="https://www.behance.net/abimosa"> <img src="imgs/icon_behance.svg" alt="twitter"
+                    width="50px"> </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
